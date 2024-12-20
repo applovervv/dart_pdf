@@ -90,6 +90,7 @@ class Icon extends StatelessWidget {
     this.color,
     this.textDirection,
     this.font,
+    this.fontFallback,
   }) : super();
 
   /// The icon to display. The available icons are described in [Icons].
@@ -106,6 +107,9 @@ class Icon extends StatelessWidget {
 
   /// Font to use to draw the icon
   final Font? font;
+
+  /// Font fallback to use to draw the icon
+  final List<Font>? fontFallback;
 
   @override
   Widget build(Context context) {
@@ -124,6 +128,7 @@ class Icon extends StatelessWidget {
           color: iconColor,
           fontSize: iconSize,
           fontNormal: iconFont,
+          fontFallback: fontFallback,
         ),
       ),
     );
